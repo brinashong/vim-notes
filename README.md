@@ -48,7 +48,6 @@ ea              append at the end of the word
 <ctrl-p>        insert (auto-complete) previous match before the cursor during insert mode
 <ctrl-r>x       insert the contents of register x
 <ctrl-o>x       temporarily enter normal mode to issue one normal-mode command x
-Esc or <ctrl-c> exit insert mode
 ```
 
 ## Editing
@@ -81,23 +80,45 @@ V               start linewise visual mode
 o               move to other end of marked area
 <ctrl-v>        start visual block mode
 O               move to other corner of block
-aw              mark a word
-ab              a block with ()
-aB              a block with {}
-at              a block with <> tags
-ib              inner block with ()
-iB              inner block with {}
-it              inner block with <> tags
-Esc or <ctrl-c> exit visual mode
-```
-
-## Visual commands
-```
->               shift text right
-<               shift text left
+vaw             mark a word
+vab, va(, va)   mark a block with ()
+vaB, va{, va}   mark a block with {}
+va<, va>        mark a block with <> tags
+vib, vi(, vi)   mark inner block with ()
+viB, vi{, vi}   mark inner block with {}
+vi<, vi>        mark inner block with <> tags
+>               shift marked text right
+<               shift marked text left
 y               yank (copy) marked text
 d               delete marked text
-~               switch case
+~               switch marked text case
 u               change marked text to lowercase
 U               change marked text to uppercase
 ```
+
+## Registers
+```
+:reg[isters]    show registers content
+"xy             yank into register x
+"xp             paste contents of register x
+```
+
+## Marks and positions
+```
+:marks          list of marks
+ma              set current position for mark A
+`a              jump to position of mark A
+y`a             yank text to position of mark A
+`0              go to the position where Vim was previously exited
+`"              go to the position when last editing this file
+`.              go to the position of the last change in this file
+``              go to the position before the last jump
+:ju[mps]        list of jumps
+<ctrl-i>        go to newer position in jump list
+<ctrl-o>        go to older position in jump list
+:changes        list of changes
+g,              go to newer position in change list
+g;              go to older position in change list
+<ctrl-]>        jump to the tag under cursor
+```
+
