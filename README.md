@@ -122,3 +122,37 @@ g;              go to older position in change list
 <ctrl-]>        jump to the tag under cursor
 ```
 
+## Macros
+```
+qa              record macro a
+q               stop recording macro
+@a              run macro a
+3@a             run macro a 3 times
+@@              rerun last run macro
+5@@             rerun last run macro 5 times
+```
+
+## Cut and paste
+```
+yy              yank (copy) a line
+2yy             yank (copy) 2 lines
+yw              yank (copy) the characters of the word from the cursor position to the start of the next word
+yiw             yank (copy) word under the cursor
+yaw             yank (copy) word under the cursor and the space after or before it
+y$ or Y         yank (copy) to end of line
+p               paste the clipboard after cursor
+P               paste before cursor
+gp              paste the clipboard after cursor and leave cursor after the new text
+gP              paste before cursor and leave cursor after the new text
+dd              delete a line
+2dd             delete 2 lines
+dw              delete the characters of the word from the cursor position to the start of the next word
+diw             delete word under the cursor
+daw             delete word under the cursor and the space after or before it
+:3,5d           delete lines starting from 3 to 5
+:.,$d           delete from the current line to the end of the file
+:g/{pattern}/d  delete all lines containing pattern
+:g!/{pattern}/d delete all lines not containing pattern
+d$ or D         delete to the end of the line
+x               delete (cut) character
+```
