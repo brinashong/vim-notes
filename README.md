@@ -24,6 +24,7 @@ Fx, Tx          jump to the previous, after previous occurrence of character x
 ,               repeat previous f, t, F or T movement, backwards
 }, {            jump to next, previous paragraph (or function/block, when editing code)
 zz, zt, zb      position cursor on center, top, bottom of the screen
+zs, ze          position cursor at start, end of line (when wrap text is off)
 <ctrl-e>        move screen down one line (without moving cursor)
 <ctrl-y>        move screen up one line (without moving cursor)
 <ctrl-o>        move back through the breadcrumbs. Will jump through buffers.
