@@ -156,4 +156,6 @@ daw             delete word under the cursor and the space after or before it
 :g!/{pattern}/d delete all lines not containing pattern
 d$ or D         delete to the end of the line
 x               delete (cut) character
+y"+             copy highlighted code to system clipboard
+p"+             paste code from system clipboard
 ```
